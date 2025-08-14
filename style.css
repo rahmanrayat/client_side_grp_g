@@ -1,0 +1,109 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+.navbar {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(90deg, #0652f6, #0a9396);
+}
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+.nav-link {
+    transition: color 0.3s;
+}
+.nav-link:hover {
+    color: #ffdd57 !important;
+}
+
+
+
+.banner-title {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.5rem;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  animation: fadeDown 1.5s ease-in-out;
+}
+
+@keyframes fadeDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-50%);
+    }
+}
+
+
+.container h2 {
+    font-weight: 700;
+    color: #005f73;
+}
+.service-item {
+    cursor: pointer;
+    padding: 15px;
+    background: white;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+.service-item:hover {
+    background: #e0f4f4;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content {
+    border-radius: 5px;
+    border: none;
+}
+.modal-header {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-image: url('image/backgro.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #005f73;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+}
+.cookie-banner button {
+    background: #ffdd57;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight
+}
