@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Living Costs in the UK</title>
+    <!-- Tailwind CSS for a clean, responsive layout -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles to match the provided image */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7;
+        }
+
+        .sidebar {
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            overflow-y: auto;
+            background-color: #f8fafc;
+            /* Lighter background color */
+            padding: 2rem;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .content-container {
+            margin-left: 400px;
+            /* Adjust for sidebar width */
+            max-width: 1000px;
+            padding: 2rem;
+        }
+
+        .toc-list-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.5rem 0;
+            cursor: pointer;
+            border-radius: 0.5rem;
+            transition: background-color 0.2s;
+        }
+
+        .toc-list-item:hover {
+            background-color: #f1f5f9;
+            /* gray-100 on hover */
+        }
+
+        .toc-list-item.active {
+            position: relative;
+            background-color: #f1f5f9;
+            /* light gray background */
+            font-weight: 600;
+        }
+
+        .toc-list-item.active::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 4px;
+            background-color: #ef4444;
+            /* red-500 */
+            border-radius: 0.25rem;
+        }
+
+        .toc-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2rem;
+            height: 2rem;
+            background-color: #cbd5e1;
+            /* slate-300 */
+            color: #4b5563;
+            /* gray-600 */
+            border-radius: 9999px;
+            /* full rounded */
+            font-size: 0.875rem;
+            /* text-sm */
+            transition: all 0.2s;
+        }
+
+        .toc-list-item.active .toc-number {
+            background-color: #ef4444;
+            /* red-500 */
+            color: #fff;
+        }
+
+        .toc-title {
+            color: #4b5563;
+            /* gray-600 */
+            transition: color 0.2s;
+        }
+
+        .toc-list-item.active .toc-title {
+            color: #111827;
+            /* gray-900 */
+        }
+
+        .content-section {
+            padding-top: 3rem;
+            padding-bottom: 2rem;
+        }
+
+        @media (max-width: 1023px) {
+            .sidebar {
+                display: none;
+            }
+
+            .content-container {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body class="flex bg-gray-50">
+
+    <!-- Table of Contents Sidebar -->
+    <aside class="sidebar hidden lg:block">
+        <div class="flex items-center gap-2 mb-6">
+            <div class="w-1.5 h-6 bg-red-500 rounded-md"></div>
+            <h2 class="text-lg font-bold text-gray-900">Table of Contents</h2>
+        </div>
+        <nav>
+            <ul id="toc-list" class="space-y-2">
+                <!-- Links will be generated here by JavaScript -->
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="content-container">
+        <!-- Introduction Paragraph -->
+        <p class="text-gray-600 mb-8">
+            Looking for some insights into how your fellow citizens are getting by financially, understanding the cost
+            of living in the UK is crucial to making informed decisions.
+            This article will delve into the nitty-gritty details of the average cost of living in the United Kingdom
+            and what it takes financially to live there comfortably in 2025. From housing and transportation to food and
+            entertainment expenses, we will provide an insightful breakdown to help you plan your finances accordingly.
+        </p>
+
+        <!-- Section 1 -->
+        <section id="how-where-you-live" class="content-section">
+            <h1 class="text-3xl font-bold text-gray-800 mb-4">1. How Where You Live in the UK Affects Living Costs</h1>
+            <div class="flex flex-col md:flex-row gap-8 items-start">
+                <img src="./img/beautiful-london-streets-cityscape.jpg" alt="A street view of a UK city"
+                    class="rounded-lg shadow-md w-full md:w-1/2">
+                <div class="flex flex-col gap-4 text-gray-700">
+                    <p>First and foremost, regardless of where you live in the world, there can be a drastic difference
+                        in the cost of living from region to region and city to city, and this is no different for the
+                        United Kingdom.</p>
+                    <p>London and surrounding areas of southern England are typically the most expensive places to live
+                        in, followed by major cities further north like Manchester, Birmingham, and Edinburgh. Rural
+                        areas and small towns tend to be cheaper than big cities, but there can be exceptions. For
+                        example, living in the seaside city of Brighton and Hove can be almost as expensive as living in
+                        London.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2 -->
+        <section id="cost-of-living-by-city" class="content-section">
+            <h1 class="text-3xl font-bold text-gray-800 mb-4">2. The Cost of Living in the UK by City</h1>
+            <p class="text-gray-700">This section would contain a detailed breakdown of the cost of living in various UK
+                cities, including London, Manchester, and Edinburgh.</p>
+        </section>
+
+        <!-- Section 3 -->
+        <section id="average-cost-of-housing" class="content-section">
+            <h1 class="text-3xl font-bold text-gray-800 mb-4">3. The Average Cost of Housing in the UK</h1>
+            <p class="text-gray-700">Here we would discuss the average prices for renting or buying a home across the
+                country, and how these prices vary by location and property type.</p>
+        </section>
+
+        <!-- Section 4 -->
+        <section id="average-cost-of-food" class="content-section">
+            <h1 class="text-3xl font-bold text-gray-800 mb-4">4. The Average Cost of Food and Drink in the UK</h1>
+            <p class="text-gray-700">An analysis of typical grocery bills, restaurant dining costs, and the price of
+                drinks, both alcoholic and non-alcoholic.</p>
+        </section>
+
+        <!-- Section 5 -->
+        <section id="average-cost-of-utilities" class="content-section">
+            <h1 class="text-3xl font-bold text-gray-800 mb-4">5. The Average Cost of Utilities in the UK</h1>
+            <p class="text-gray-700">This section will cover the expenses related to electricity, gas, water, internet,
+                and council tax.</p>
+        </section>
+
+        <!-- Section 6 -->
+        <section id="average-cost-of-transport" class="content-section">
+            <h1 class="text-3xl font-bold text-gray-800 mb-4">6. The Average Cost of Transport in the UK</h1>
+            <p class="text-gray-700">We'll examine the costs of public transportation, car ownership, and fuel prices in
+                different parts of the UK.</p>
+        </section>
+
+        <!-- Section 7 -->
+        <section id="private-healthcare-costs" class="content-section">
+            <h1 class="text-3xl font-bold text-gray-800 mb-4">7. Private Healthcare Costs in the UK</h1>
+            <p class="text-gray-700">A look at the cost of private healthcare services and insurance, in contrast to the
+                publicly funded NHS.</p>
+        </section>
+
+        <!-- Section 8 -->
+        <section id="living-costs-for-students" class="content-section">
+            <h1 class="text-3xl font-bold text-gray-800 mb-4">8. The Average Living Costs for Students in the UK</h1>
+            <p class="text-gray-700">This section will be tailored specifically to students, covering accommodation,
+                course materials, and social life expenses.</p>
+        </section>
+
+        <!-- Section 9 -->
+        <section id="entertainment-and-additional-expenses" class="content-section">
+            <h1 class="text-3xl font-bold text-gray-800 mb-4">9. Entertainment and Additional Expenses</h1>
+            <p class="text-gray-700">An overview of typical costs for leisure activities, hobbies, and other
+                discretionary spending.</p>
+        </section>
+
+        <!-- Section 10 -->
+        <section id="frequently-asked-questions" class="content-section">
+            <h1 class="text-3xl font-bold text-gray-800 mb-4">10. Frequently Asked Questions about the Cost of Living in
+                the UK</h1>
+            <p class="text-gray-700">A Q&A section addressing common queries regarding living expenses in the UK.</p>
+        </section>
+    </main>
+
+    <script>
+        // JavaScript to dynamically generate the table of contents and handle scrolling
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll("section");
+            const tocList = document.getElementById("toc-list");
+            let tocCounter = 1;
+
+            sections.forEach(section => {
+                const title = section.querySelector("h1").textContent;
+                const id = section.id;
+                const cleanTitle = title.replace(/^\d+\.\s*/, '').trim(); // Remove number from title
+
+                const li = document.createElement("li");
+
+                const linkContainer = document.createElement("a");
+                linkContainer.href = `#${id}`;
+                linkContainer.classList.add("toc-list-item");
+
+                const numberSpan = document.createElement("span");
+                numberSpan.classList.add("toc-number");
+                numberSpan.textContent = tocCounter;
+
+                const titleSpan = document.createElement("span");
+                titleSpan.classList.add("toc-title");
+                titleSpan.textContent = cleanTitle;
+
+                linkContainer.appendChild(numberSpan);
+                linkContainer.appendChild(titleSpan);
+                li.appendChild(linkContainer);
+                tocList.appendChild(li);
+
+                tocCounter++;
+            });
+
+            // Smooth scrolling functionality
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 20, // Adjust for a small offset
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Highlight active link on scroll
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    const id = entry.target.getAttribute('id');
+                    const tocLink = document.querySelector(`a[href="#${id}"]`);
+
+                    if (entry.isIntersecting) {
+                        document.querySelectorAll('.toc-list-item').forEach(item => {
+                            item.classList.remove('active');
+                        });
+                        if (tocLink) {
+                            tocLink.classList.add('active');
+                        }
+                    }
+                });
+            }, { rootMargin: '-50% 0px -50% 0px' }); // Center the intersection
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+
+</html>
