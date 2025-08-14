@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Student Support Hub</title>
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav>
+        <h2>Student Support Hub</h2>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about-us.html">About Us</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-banner">
+        <h2>Contact Us</h2>
+      </section>
+
+      <div class="container">
+        <section class="contact-section">
+          <div class="image-column">
+            <img src="./assets/images/studentsupport.jpg" class="contact-us-image" alt="Students receiving support"/>
+          </div>
+          <div class="form-column contact-form-wrapper">
+            <form class="contact-form" action="">
+              <h3>Send Us a Message</h3>
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Enter Your Name" required/>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="Enter your Email" required/>
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="How can we help?" required></textarea>
+              <button type="submit">Send Message</button>
+            </form>
+          </div>
+        </section>
+
+        <section class="address-info-section">
+          <div class="card">
+            <h3 class="card-title">Address Info</h3>
+            <p><b>Location:</b> BigBan Tower, London</p>
+            <p><b>Contact Number:</b> +44 20 1234 5678</p>
+          </div>
+          <div class="card">
+            <h3 class="card-title">Contact Hours</h3>
+            <ul>
+              <li><b>Monday:</b> 8am to 12am (midnight)</li>
+              <li><b>Tuesday – Friday:</b> Available 24 hrs</li>
+              <li><b>Saturday:</b> 12am (midnight) to 10am</li>
+              <li><b>Sunday:</b> Closed</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-about">
+          <h3 class="footer-title">Student Support Hub</h3>
+          <p>
+            A support community for students, guiding them in the proper way
+            and providing helpful resources.
+          </p>
+        </div>
+        <div class="footer-links">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./scripts/contact.js"></script>
+  </body>
+</html>
