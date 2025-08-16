@@ -9,76 +9,128 @@
 </head>
 <body>
 
-    
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">YourBridge</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navMenu">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Find Support</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Sign In</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
-    <div class="text-center my-4">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">YourBridge</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                <li class="nav-item"><a href="signin.html" class="btn btn-primary">Sign In / Sign Up</a>
 
-      <img src="image/backgro.jpg" alt="Banner" class="img-fluid rounded">
-    </div>
-
-   
-
-    <div class="container my-5">
-        <div class="modal-body" id="popupMessage">
-    
-
-        <h2 class="mb-4">Our Services</h2>
-        <p>Click on each service to know more:</p>
-        
-           <ul class="list-group list-group-flush">
-    <li class="list-group-item service-item" data-message="We provide expert assistance in securing safe, affordable, and convenient housing tailored to your needs.">Accommodation Assistance</li>
-    <li class="list-group-item service-item" data-message="Guidance on finding part-time or full-time job opportunities suitable for international students.">Employment Support</li>
-    <li class="list-group-item service-item" data-message="Information and advice to help you understand your rights and responsibilities while studying in the UK.">Legal Rights Guidance</li>
-    <li class="list-group-item service-item" data-message="Opportunities to connect with cultural and student communities to expand your network and make friends.">Community Connections</li>
-    <li class="list-group-item service-item" data-message="Insights into local attractions, landmarks, and cultural sites to help you explore and enjoy the UK.">Places to Visit</li>
-    <li class="list-group-item service-item" data-message="Personalised academic support, including help with assignments, research, and writing.">Academic Assistance</li>
-</ul>
-
-        
-    </div>
-
-   
-    <div class="modal fade" id="popupModal" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Service Info</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body" id="popupMessage">...</div>
-            </div>
+            </ul>
         </div>
     </div>
+</nav>
 
-  
-    <div class="cookie-banner" id="cookieBanner">
-        This website uses cookies for a better experience.
-        <button class="btn btn-sm btn-light" id="acceptCookies">Accept</button>
+
+<div class="text-center my-4">
+ <div class="text-center my-4">
+    <section class="hero-section">
+    <div class="hero-overlay">
+        <h1>Welcome to YourBridge</h1>
+        <p>Helping students find housing, jobs, and guidance in the UK.</p>
+        <a href="#services" class="hero-btn">🚀 Get Started</a>
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+</section>
 
 
-    
+
+
+<div class="container my-5" id="services">
+
+    <h2 class="mb-4">Our Services</h2>
+    <p>Click on each service to know more:</p>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item service-item" data-message="We provide expert assistance in securing safe, affordable, and convenient housing tailored to your needs.">Accommodation Assistance</li>
+        <li class="list-group-item service-item" data-message="Guidance on finding part-time or full-time job opportunities suitable for international students.">Employment Support</li>
+        <li class="list-group-item service-item" data-message="Information and advice to help you understand your rights and responsibilities while studying in the UK.">Legal Rights Guidance</li>
+        <li class="list-group-item service-item" data-message="Opportunities to connect with cultural and student communities to expand your network and make friends.">Community Connections</li>
+        <li class="list-group-item service-item" data-message="Insights into local attractions, landmarks, and cultural sites to help you explore and enjoy the UK.">Places to Visit</li>
+        <li class="list-group-item service-item" data-message="Personalised academic support, including help with assignments, research, and writing.">Academic Assistance</li>
+    </ul>
+</div>
+
+
+<div class="modal fade" id="popupModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Service Info</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body" id="popupMessage">...</div>
+        </div>
+    </div>
+</div>
+
+
+<button id="getInTouchBtn" data-bs-toggle="modal" data-bs-target="#contactModal">
+    🚀 Get In Touch
+</button>
+
+
+<div class="modal fade" id="contactModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content contact-modal">
+            <div class="modal-header">
+                <h5 class="modal-title">Contact Us</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    
+                    <div class="mb-3">
+                        <label for="nameInput" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="nameInput" placeholder="Your name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="emailInput" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="emailInput" placeholder="you@example.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="messageInput" class="form-label">Message</label>
+                        <textarea class="form-control" id="messageInput" rows="4" placeholder="How can we help you?"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success w-100">Submit</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="cookie-banner" id="cookieBanner">
+    This website uses cookies for a better experience.
+    <button class="btn btn-sm btn-light" id="acceptCookies">Accept</button>
+    <button class="btn btn-sm btn-secondary" id="rejectCookies">Reject</button>
+</div>
+
+
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1100">
+    <div id="cookieToast" class="toast align-items-center text-bg-success border-0" role="alert">
+        <div class="d-flex">
+            <div class="toast-body">Thanks for accepting our cookies!</div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+        </div>
+    </div>
+</div>
+
+
+<footer class="footer bg-dark text-white text-center py-3">
+    © 2025 YourBridge — All rights reserved.
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+
 </body>
 </html>
