@@ -5,138 +5,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Living Costs in the UK</title>
-    <!-- Tailwind CSS for a clean, responsive layout -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Custom styles to match the provided image */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f7f7f7;
-        }
-
-        .sidebar {
-            width: 250px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 100vh;
-            overflow-y: auto;
-            background-color: #f8fafc;
-            /* Lighter background color */
-            padding: 2rem;
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
-        }
-
-        .content-container {
-            margin-left: 400px;
-            /* Adjust for sidebar width */
-            max-width: 1000px;
-            padding: 2rem;
-        }
-
-        .toc-list-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            padding: 0.5rem 0;
-            cursor: pointer;
-            border-radius: 0.5rem;
-            transition: background-color 0.2s;
-        }
-
-        .toc-list-item:hover {
-            background-color: #f1f5f9;
-            /* gray-100 on hover */
-        }
-
-        .toc-list-item.active {
-            position: relative;
-            background-color: #f1f5f9;
-            /* light gray background */
-            font-weight: 600;
-        }
-
-        .toc-list-item.active::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 4px;
-            background-color: #ef4444;
-            /* red-500 */
-            border-radius: 0.25rem;
-        }
-
-        .toc-number {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 2rem;
-            height: 2rem;
-            background-color: #cbd5e1;
-            /* slate-300 */
-            color: #4b5563;
-            /* gray-600 */
-            border-radius: 9999px;
-            /* full rounded */
-            font-size: 0.875rem;
-            /* text-sm */
-            transition: all 0.2s;
-        }
-
-        .toc-list-item.active .toc-number {
-            background-color: #ef4444;
-            /* red-500 */
-            color: #fff;
-        }
-
-        .toc-title {
-            color: #4b5563;
-            /* gray-600 */
-            transition: color 0.2s;
-        }
-
-        .toc-list-item.active .toc-title {
-            color: #111827;
-            /* gray-900 */
-        }
-
-        .content-section {
-            padding-top: 3rem;
-            padding-bottom: 2rem;
-        }
-
-        @media (max-width: 1023px) {
-            .sidebar {
-                display: none;
-            }
-
-            .content-container {
-                margin-left: 0;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="services.css">
+    
 </head>
 
-<body class="flex bg-gray-50">
+        <nav class="navbar">
+        <div class="logo">
+            <span class="orange">Your</span> Bridge
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">ABOUT</a></li>
+            <li class="dropdown">
+                <a href="#" class="active">FIND SUPPORT</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">SUPPORT FOR ME</a></li>
+                    <li><a href="#">SUPPORT FOR A FRIEND</a></li>
+                    <li><a href="#">SUPPORT FOR PARENTS</a></li>
+                </ul>
+            </li>
+            <li><a href="#">GET INVOLVED</a></li>
+            <li><a href="#">TRAINING</a></li>
+            <li><a href="#">NEWS AND PUBLICATIONS</a></li>
+            <li><a href="#">SUPPORT US</a></li>
+        </ul>
+    </nav>
 
-    <!-- Table of Contents Sidebar -->
+<body>
+
+
+    
+    <!--table of con -->
     <aside class="sidebar hidden lg:block">
         <div class="flex items-center gap-2 mb-6">
             <div class="w-1.5 h-6 bg-red-500 rounded-md"></div>
             <h2 class="text-lg font-bold text-gray-900">Table of Contents</h2>
         </div>
         <nav>
-            <ul id="toc-list" class="space-y-2">
-                <!-- Links will be generated here by JavaScript -->
-            </ul>
+            <ul id="toc-list" class="space-y-2"></ul>
         </nav>
     </aside>
 
-    <!-- Main Content Area -->
     <main class="content-container">
-        <!-- Introduction Paragraph -->
         <p class="text-gray-600 mb-8">
             Looking for some insights into how your fellow citizens are getting by financially, understanding the cost
             of living in the UK is crucial to making informed decisions.
@@ -145,7 +55,6 @@
             entertainment expenses, we will provide an insightful breakdown to help you plan your finances accordingly.
         </p>
 
-        <!-- Section 1 -->
         <section id="how-where-you-live" class="content-section">
             <h1 class="text-3xl font-bold text-gray-800 mb-4">1. How Where You Live in the UK Affects Living Costs</h1>
             <div class="flex flex-col md:flex-row gap-8 items-start">
@@ -164,68 +73,212 @@
             </div>
         </section>
 
-        <!-- Section 2 -->
         <section id="cost-of-living-by-city" class="content-section">
             <h1 class="text-3xl font-bold text-gray-800 mb-4">2. The Cost of Living in the UK by City</h1>
             <p class="text-gray-700">This section would contain a detailed breakdown of the cost of living in various UK
                 cities, including London, Manchester, and Edinburgh.</p>
+
+            <details>
+                <summary>London</summary>
+                <p class="description">Of all the UK cities, London is the most well-known and also the most expensive.
+                    As one of the largest cities in Europe, it’s an urban metropolis spanning hundreds of square miles.
+                    London leads in many business-related statistics, such as the highest concentration of businesses in
+                    the UK. It’s also the global headquarters for many international corporations, particularly those in
+                    finance.</p>
+                <p class="description">Consequently, job opportunities in London are plentiful, and wages in London
+                    compared to the rest of the UK are generally higher, so the desire to move there remains strong,
+                    despite rising rent prices and energy costs.</p>
+                <ul class="data-list">
+                    <li>Family of four: £3,378.50</li>
+                    <li>Single person: £980.80</li>
+                </ul>
+                <p class="description">The average price of accommodation in London:</p>
+                <ul class="data-list">
+                    <li>Three-bedroom apartment in the city center: £3,898.74</li>
+                    <li>Three-bedroom apartment outside the center: £2,581.32</li>
+                    <li>One-bedroom apartment in the city center: £2,313.46</li>
+                    <li>One-bedroom apartment outside the center: £1,717.67</li>
+                </ul>
+            </details>
+
+            <details>
+                <summary>Manchester</summary>
+                <p class="description">Over the last few years, due to rising costs of living, Manchester has
+                    experienced rapid development, with many international companies and people from the south
+                    relocating there to save money and take advantage of the booming economy.</p>
+                <p class="description">As a result, the cost of living in Manchester has increased, but it still remains
+                    more affordable than London.</p>
+                <ul class="data-list">
+                    <li>Family of four: £2,536.50</li>
+                    <li>Single person: £746.40</li>
+                </ul>
+                <p class="description">The average price of accommodation in Manchester:</p>
+                <ul class="data-list">
+                    <li>Three-bedroom apartment in the city center: £1,741.18</li>
+                    <li>Three-bedroom apartment outside the center: £1,052.50</li>
+                    <li>One-bedroom apartment in the city center: £910.69</li>
+                    <li>One-bedroom apartment outside the center: £679.60</li>
+                </ul>
+            </details>
+
+            <details>
+                <summary>Edinburgh</summary>
+                <p class="description">Edinburgh is one of the most popular tourist destinations in the UK. Its quaint
+                    and cinematic feel is hard to find anywhere else. Although a long way from London, the quality of
+                    life in Edinburgh is considered to be better in many ways, particularly concerning safety. It’s one
+                    of the safest cities in the UK, with a crime rate significantly lower than the national average.</p>
+                <p class="description">Despite a relatively small population in UK terms, it’s the most expensive city
+                    in Scotland and one of the more expensive cities in the UK due to high rental demand, as available
+                    properties for rent are few and far between. A major factor in this is its national and global
+                    popularity yet small city center, as well as a scattering of rows of Grade II listed buildings,
+                    which prevent a lot of modern development and expansion.</p>
+                <ul class="data-list">
+                    <li>Family of four: £2,570.80</li>
+                    <li>Single person: £739.40</li>
+                </ul>
+                <p class="description">The average price of accommodation in Edinburgh:</p>
+                <ul class="data-list">
+                    <li>Three-bedroom apartment in the city center: £1,740.00</li>
+                    <li>Three-bedroom apartment outside the center: £1,182.00</li>
+                    <li>One-bedroom apartment in the city center: £1,020.00</li>
+                    <li>One-bedroom apartment outside the center: £788.00</li>
+                </ul>
+            </details>
+
         </section>
 
         <!-- Section 3 -->
         <section id="average-cost-of-housing" class="content-section">
             <h1 class="text-3xl font-bold text-gray-800 mb-4">3. The Average Cost of Housing in the UK</h1>
-            <p class="text-gray-700">Here we would discuss the average prices for renting or buying a home across the
-                country, and how these prices vary by location and property type.</p>
+            <div class="flex flex-col md:flex-row gap-8 items-start">
+                <img src="./img/house.jpg" alt="A street view of a UK city"
+                    class="rounded-lg shadow-md w-full md:w-1/2">
+                <div class="flex flex-col gap-4 text-gray-700">
+                    <p>Regarding developed countries, the UK is in the middle ground where the cost of housing is
+                        concerned. According to figures from Numbeo, the average price of a one-bedroom apartment in a
+                        city center in the UK is £898.68 ($1,079.41) per month, whereas, in Spain, the same property is
+                        28 percent cheaper at £648.46 ($778.87) on average. However, the average price of a one-bedroom
+                        apartment in a city center in the US is £1,416.45 ($1,701.31), 36.6 percent more expensive than
+                        in the UK.</p>
+                    <p>The gap widens in more rural areas, with the monthly average rent price of £1,180.23 ($1,417.59)
+                        for a three-bedroom apartment outside the center in the UK and £814.78 ($978.64) for a similar
+                        Spanish property. The US is significantly more expensive than both, with an average monthly rent
+                        price of £1,862.36 ($2,236.90).</p>
+                    <p>Concerning property prices, data from the Office for National Statistics (ONS) had the average UK
+                        house price at £294,000 ($353,600) in December 2022. The United States Census Bureau reported an
+                        average US house price of $427,500 (£355,900) in January 2023, 17.3 percent more expensive than
+                        in the UK. You can also expect to pay £250 to £300 ($208 to $361) for the average property
+                        search cost by a real estate agent.</p>
+                </div>
+            </div>
         </section>
 
         <!-- Section 4 -->
         <section id="average-cost-of-food" class="content-section">
             <h1 class="text-3xl font-bold text-gray-800 mb-4">4. The Average Cost of Food and Drink in the UK</h1>
-            <p class="text-gray-700">An analysis of typical grocery bills, restaurant dining costs, and the price of
-                drinks, both alcoholic and non-alcoholic.</p>
+            <p class="description">Of all the UK cities, London is the most well-known and also the most expensive.
+                As one of the largest cities in Europe, it’s an urban metropolis spanning hundreds of square miles.
+                London leads in many business-related statistics, such as the highest concentration of businesses in
+                the UK. It’s also the global headquarters for many international corporations, particularly those in
+                finance.</p>
+            <p class="description">Consequently, job opportunities in London are plentiful, and wages in London
+                compared to the rest of the UK are generally higher, so the desire to move there remains strong,
+                despite rising rent prices and energy costs.</p>
+            <ul class="data-list">
+                <li>Family of four: £3,378.50</li>
+                <li>Single person: £980.80</li>
+            </ul>
+            <p class="description">The average price of accommodation in London:</p>
+            <ul class="data-list">
+                <li>Three-bedroom apartment in the city center: £3,898.74</li>
+                <li>Three-bedroom apartment outside the center: £2,581.32</li>
+                <li>One-bedroom apartment in the city center: £2,313.46</li>
+                <li>One-bedroom apartment outside the center: £1,717.67</li>
+            </ul>
         </section>
 
         <!-- Section 5 -->
         <section id="average-cost-of-utilities" class="content-section">
             <h1 class="text-3xl font-bold text-gray-800 mb-4">5. The Average Cost of Utilities in the UK</h1>
-            <p class="text-gray-700">This section will cover the expenses related to electricity, gas, water, internet,
-                and council tax.</p>
+            <p class="text-gray-700">Inflation combined with a lack of supply has had the most significant impact on
+                energy bills in the UK, raising average utility costs significantly. Figures from Of gem measuring
+                utility bills between October 2022 and January 2023 saw electricity prices rise by 66.7 percent. The
+                rise in gas prices was even higher at 129.4 percent in the same time period.</p>
         </section>
 
         <!-- Section 6 -->
         <section id="average-cost-of-transport" class="content-section">
             <h1 class="text-3xl font-bold text-gray-800 mb-4">6. The Average Cost of Transport in the UK</h1>
-            <p class="text-gray-700">We'll examine the costs of public transportation, car ownership, and fuel prices in
-                different parts of the UK.</p>
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">Public Transport Costs</h3>
+            <p class="text-gray-700">Public transportation in major UK cities is well-connected, with costs varying by
+                location and transport type. The average bus fare is £2.80, while London's Oyster card system
+                offers monthly passes for £156.30 covering zones 1–2 or £285.70 for zones 1–6, with
+                students receiving a 30% discount.</p><br>
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">Car Ownership Costs</h3>
+            <p class="text-gray-700">Car ownership in the UK involves various costs, including fuel, insurance, and
+                maintenance. The average cost of petrol is around £1.40 per liter, while annual car insurance
+                premiums can vary widely but typically range from £500 to £1,200.</p>
         </section>
 
         <!-- Section 7 -->
         <section id="private-healthcare-costs" class="content-section">
             <h1 class="text-3xl font-bold text-gray-800 mb-4">7. Private Healthcare Costs in the UK</h1>
-            <p class="text-gray-700">A look at the cost of private healthcare services and insurance, in contrast to the
-                publicly funded NHS.</p>
+            <p class="text-gray-700">For those with British citizenship and permanent residents who hold Indefinite
+                Leave to Remain (ILR), the UK’s National Health Service (NHS) provides free essential and emergency
+                health care. The only cost incurred for anyone under the NHS is a subsidized fee of £9.50 ($11.41) for
+                prescriptions. This fee will cover any type of medication or length of treatment prescribed by an NHS
+                doctor. The cost of dental care is also heavily subsidized.</p><br>
+            <p class="text-gray-700">All other UK residents are required to pay the mandatory Immigration Health
+                Surcharge (IHS) of £624 ($749.49) [International students pay £470] per year to access NHS
+                services. If you’re a UK permanent resident, depending on your residence visa, you can apply for
+                Indefinite Leave to Remain within two to five years. Once approved, you’ll no longer be liable to pay
+                the IHS.</p><br>
+            <p class="text-gray-700">The average price for private health insurance in Great Britain is relatively cheap
+                compared to the United States. Based on quotes from some of the UK’s largest health insurance providers,
+                such as Axa, Bupa, and Aviva, the average private health insurance policy for a middle-aged couple and
+                two children would be £148 ($177.76) monthly compared to an average of $928 for a basic plan in the US.
+            </p>
         </section>
 
         <!-- Section 8 -->
         <section id="living-costs-for-students" class="content-section">
             <h1 class="text-3xl font-bold text-gray-800 mb-4">8. The Average Living Costs for Students in the UK</h1>
-            <p class="text-gray-700">This section will be tailored specifically to students, covering accommodation,
-                course materials, and social life expenses.</p>
+            <p class="text-gray-700">For international students in the UK, monthly living expenses typically range
+                between £1,000–£1,500 (excluding tuition), depending on location and lifestyle. London is the most
+                expensive, with accommodation costing £800–£1,200/month for a shared flat or student housing, while
+                cities like Manchester or Glasgow average £500–£800/month. Essential costs include groceries
+                (£150–£250), transportation (£50–£100 with student discounts), and utilities (£60–£100 if not included
+                in rent). Budgeting apps like Monzo or Starling can help track spending.</p><br>
+            <p>Course materials (books, printing) add £30–£50/month, while a student gym membership costs £20–£40/month.
+                Social activities (eating out, cinema) may add £100–£200/month. The NHS healthcare surcharge (£470/year)
+                is mandatory for international students, but prescriptions are capped at £9.50/item. Part-time work (up
+                to 20 hours/week during term) can offset costs, with minimum wage at £10.42/hour (2023 rate).</p>
+
         </section>
 
         <!-- Section 9 -->
         <section id="entertainment-and-additional-expenses" class="content-section">
             <h1 class="text-3xl font-bold text-gray-800 mb-4">9. Entertainment and Additional Expenses</h1>
-            <p class="text-gray-700">An overview of typical costs for leisure activities, hobbies, and other
-                discretionary spending.</p>
+            <p class="text-gray-700">Living in the UK comes with several additional expenses that newcomers should
+                factor into their budgets. One notable cost is the TV license, required by law for watching live
+                broadcasts or BBC iPlayer, currently priced at £159 annually. Childcare represents a significant weekly
+                expense, averaging £137 for 25 hours of care. For connectivity, home internet packages with 60Mbps
+                unlimited data typically cost around £30 per month, while mobile data remains relatively affordable at
+                approximately 67p per gigabyte. Leisure activities vary considerably - a basic gym membership averages
+                £31 monthly, cinema tickets cost about £10 each, while theater tickets demand a much higher investment
+                at roughly £141 per show. These recurring expenses can substantially impact monthly budgets,
+                particularly for families requiring regular childcare or those who enjoy cultural activities. Many
+                residents find these costs surprising when first moving to the UK, as some items like the TV license
+                represent unique mandatory payments not found in many other countries. The prices mentioned represent
+                national averages, with London and other major cities typically commanding premiums of 10-25% compared
+                to smaller towns. Students and budget-conscious individuals often seek alternatives, such as outdoor
+                exercise instead of gym memberships, or matinee performances for discounted theater access. Proper
+                planning for these additional costs helps prevent financial strain, especially when combined with
+                essential living expenses like housing and transportation. Some expenses, like the TV license, can be
+                shared among housemates, while others like childcare may qualify for government assistance programs
+                depending on individual circumstances.</p>
         </section>
 
-        <!-- Section 10 -->
-        <section id="frequently-asked-questions" class="content-section">
-            <h1 class="text-3xl font-bold text-gray-800 mb-4">10. Frequently Asked Questions about the Cost of Living in
-                the UK</h1>
-            <p class="text-gray-700">A Q&A section addressing common queries regarding living expenses in the UK.</p>
-        </section>
     </main>
 
     <script>
@@ -244,7 +297,7 @@
 
                 const linkContainer = document.createElement("a");
                 linkContainer.href = `#${id}`;
-                linkContainer.classList.add("toc-list-item");
+                linkContainer.classList.add("toc_list_item");
 
                 const numberSpan = document.createElement("span");
                 numberSpan.classList.add("toc-number");
@@ -286,7 +339,7 @@
                     const tocLink = document.querySelector(`a[href="#${id}"]`);
 
                     if (entry.isIntersecting) {
-                        document.querySelectorAll('.toc-list-item').forEach(item => {
+                        document.querySelectorAll('.toc_list_item').forEach(item => {
                             item.classList.remove('active');
                         });
                         if (tocLink) {

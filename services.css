@@ -175,9 +175,141 @@ body {
             color: #fff;
         }
 
-        /* Custom style for the fundraising regulator logo */
         .fundraising-logo {
             width: 150px;
             height: auto;
             border-radius: 8px;
+        }
+
+
+
+        /* service page */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7;
+            
+
+        }
+
+        .sidebar {
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            overflow-y: auto;
+            background-color: #f8fafc;
+            padding: 2rem;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .content-container {
+            margin-left: 400px;
+            max-width: 1000px;
+            padding: 2rem;
+        }
+
+        .toc_list_item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.5rem 0;
+            cursor: pointer;
+            border-radius: 0.5rem;
+            transition: background-color 0.2s;
+        }
+
+        .toc_list_item:hover {
+            background-color: #f1f5f9;
+        }
+
+        .toc_list_item.active {
+            position: relative;
+            background-color: #f1f5f9;
+            font-weight: 600;
+        }
+
+        .toc_list_item.active::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 4px;
+            background-color: #ef4444;
+            border-radius: 0.25rem;
+        }
+
+        .toc-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2rem;
+            height: 2rem;
+            background-color: #cbd5e1;
+            color: #4b5563;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            transition: all 0.2s;
+        }
+
+        .toc_list_item.active .toc-number {
+            background-color: #ef4444;
+            color: #fff;
+        }
+
+        .toc-title {
+            color: #4b5563;
+            transition: color 0.2s;
+        }
+
+        .toc_list_item.active .toc-title {
+            color: #111827;
+        }
+
+        .content-section {
+            padding-top: 3rem;
+            padding-bottom: 2rem;
+        }
+
+        @media (max-width: 1023px) {
+            .sidebar {
+                display: none;
+            }
+
+            .content-container {
+                margin-left: 0;
+            }
+        }
+
+        details {
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin: 10px 0;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        summary {
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            color: #444;
+            outline: none;
+        }
+
+        details[open] summary {
+            color: #0077cc;
+        }
+
+        .description {
+            margin: 10px 0;
+            color: #555;
+        }
+
+        .data-list {
+            margin: 10px 0;
+            color: #555;
+            padding-left: 20px;
         }
