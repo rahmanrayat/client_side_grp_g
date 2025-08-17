@@ -3,15 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact - Student Support Hub</title>
-    <link rel="stylesheet" href="./style/style.css" />
+    <title>Contact - YourBridge</title>
+    <link rel="stylesheet" href="./style/style2.css" />
   </head>
   <body>
     <header class="site-header">
       <nav>
-        <h2>Student Support Hub</h2>
+        <h2>YourBridge</h2>
         <div class="nav-links">
-          <a href="index.html">Home</a>
           <a href="about-us.html">About Us</a>
           <a href="contact.html">Contact</a>
         </div>
@@ -29,7 +28,7 @@
             <img src="./assets/images/studentsupport.jpg" class="contact-us-image" alt="Students receiving support"/>
           </div>
           <div class="form-column contact-form-wrapper">
-            <form class="contact-form" action="">
+            <form class="contact-form" id="contactForm" action="">
               <h3>Send Us a Message</h3>
               <label for="name">Name</label>
               <input id="name" name="name" type="text" placeholder="Enter Your Name" required/>
@@ -38,6 +37,9 @@
               <label for="message">Message</label>
               <textarea id="message" name="message" rows="5" placeholder="How can we help?" required></textarea>
               <button type="submit">Send Message</button>
+              <div id="successMessage">
+
+              </div>
             </form>
           </div>
         </section>
@@ -64,7 +66,7 @@
     <footer class="site-footer">
       <div class="footer-container">
         <div class="footer-about">
-          <h3 class="footer-title">Student Support Hub</h3>
+          <h3 class="footer-title">YourBridge</h3>
           <p>
             A support community for students, guiding them in the proper way
             and providing helpful resources.
@@ -81,6 +83,6 @@
     </footer>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="./scripts/contact.js"></script>
+    <script src="./script/contact.js"></script>
   </body>
 </html>
