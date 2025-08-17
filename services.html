@@ -1,90 +1,128 @@
-<!DOCTYPE html>
+code of studenthub.html'####**<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Find Support</title>
+    <title>Student Help</title>
     <link rel="stylesheet" href="services.css">
+    <title>University Mental Health Support</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
 </head>
-
 <body>
+   <a href="services.html"
+   class="fixed bottom-5 right-5 px-4 py-2 rounded-full shadow-lg bg-gray-900 text-white hover:bg-gray-800 transition">
+  ← Back to Services
+</a>
 
-    <nav class="navbar">
-        <div class="logo">
-            <span class="orange">Your</span> Bridge
-        </div>
-        <ul class="nav-links">
-            <li><a href="#">ABOUT</a></li>
-            <li class="dropdown">
-                <a href="services.html" class="active">FIND SUPPORT</a>
-                <ul class="dropdown-content">
-                    <li><a href="student.html">SUPPORT FOR ME</a></li>
-                    <li><a href="costofliving.html">Cost Of Living</a></li>
-                    <li><a href="#">SUPPORT FOR PARENTS</a></li>
-                </ul>
-            </li>
-            <li><a href="#">GET INVOLVED</a></li>
-            <li><a href="#">TRAINING</a></li>
-            <li><a href="#">NEWS AND PUBLICATIONS</a></li>
-            <li><a href="#">SUPPORT US</a></li>
-        </ul>
-    </nav>
 
-    <div class="hero-image_1">
-        <div class="hero-text">
-            <h1>Find Services</h1>
-            <p>Discover the support available to you</p>
-        </div>
+
+
+<div class="hero-image_2">
+    <div class="hero-text">
+        <h1>Find Services</h1>
+        <p>Discover the support available to you</p>
+    </div>
+</div><br>
+
+<div class="container">
+    <div class="header-content">
+        <h1>We know that experiencing mental health difficulties at university can feel overwhelming.</h1>
+        <p>However there are lots of different types of support that might be available to you while at
+            university. We have put this information in one place, so that you can read more about the support
+                programmes that Student Minds offers, as well as services available at your university.</p>
     </div>
 
-    <section class="intro">
-        <p>
-            Whether you are looking for support for your own mental health at university,
-            support for a friend or loved one, or for services that might be available to
-            you as a student, <strong>help is available.</strong>
-        </p>
-    </section>
+    <div class="card-grid">
+        <div class="card urgent-support">
+            <div>
+                <h2>Urgent Support</h2>
+                <p class="section-text">Are you feeling desperate or distressed right now?</p>
 
-    <section class="cards">
-        <div class="card orange" onclick="window.location.href='costofliving.html'">
-            <h2>Cost of living</h2>
-            <p>
-                Explore our cost of living hub to find support, learn about how it is
-                impacting students and use your voice.
-            </p>
+                <p class="section-title">Need to talk to someone?</p>
+                <p><a>Samaritans</a> - open every day throughout the year.</p>
+
+                <p class="section-title">Need medical help?</p>
+                <ul>
+                    <li>If you need medical advice you can book an emergency GP appointment with your <a>GP surgery</a>.
+                    </li>
+                    <li>
+                        <p>If you need urgent help for your mental health get help from <a>111 online</a> or call
+                            <a>111</a> and select the mental health option.</p>
+                        <p><strong>Note:</strong> this is a new initiative that came into force on 8th May 2024 which is
+                            being rolled out across England as a universal point of access for people experiencing
+                            mental health crisis.</p>
+                    </li>
+                    <li>If you need urgent medical advice call the <strong>NHS 111</strong> (England & Wales) or
+                        <strong>NHS 24</strong>(Scotland) - T. 08454 242424</li>
+                    <li>If you need immediate medical help or attention call <strong>999</strong> or visit
+                        <strong>Accident & Emergency (A&E)</strong>.</li>
+                </ul>
+            </div>
         </div>
 
-        <div class="card red" onclick="window.location.href='student.html'">
-            <h2>Student Space</h2>
-            <p>
-                Student Space is here to make it easier for you to find the support you need
-                through your student journey.
-            </p>
-        </div>
-    </section>
+        <div class="card support-through-university">
+            <div class="text-content">
+                <h2>Support through university</h2>
+                <p>Student Space is here for you through your university and post-graduation journey.
+                    However you’re feeling help and guidance is available. Explore a range of trusted information,
+                    services and tools to help you with the challenges of student life: <a>studentspace.org.uk</a></p>
+            </div>
 
-    <section class="cards">
-        <div class="card orange" onclick="goTo('cost-of-living.html')">
-            <h2>Support for a friend</h2>
-            <p>
-                This page outlines how to start a conversation with a friend, and how to support them whilst remembering
-                to look after yourself.
-            </p>
         </div>
 
-        <div class="card red" onclick="goTo('student-space.html')">
-            <h2>Support for parents</h2>
-            <p>
-                Read some frequently asked questions by parents looking for further information on how to support their
-                child at university.
-            </p>
+        <div class="card university-workshops">
+            <h2>University staff run workshops</h2>
+            <p>We've developed two short workshops with students and experts so that any student can build on the skills
+                needed to support friends, peers or teammates.</p>
         </div>
-    </section>
 
-    <br>
+        <div class="card support-at-university">
+            <h2>Support at your university and further</h2>
+            <p>There are a range of support services you can access depending on your needs, some on your campus, such
+                as counselling services and the local GP.</p>
+        </div>
+    </div>
+</div>
+<br>
 
-    <script src="script.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1 
+        });
+
+        const cards = document.querySelectorAll('.card_s');
+
+        cards.forEach(card => {
+            observer.observe(card);
+        });
+    });
+</script>
+
 </body>
-
+<header class="sticky top-0 z-50 bg-gray-900 text-white">
+  <div class="max-w-6xl mx-auto flex items-center justify-between p-3">
+    <a href="home.html" class="font-semibold tracking-wide">YourBridge</a>
+    <div class="flex gap-2">
+      <a href="services.html" class="px-3 py-1 rounded bg-gray-700 hover:bg-gray-600 transition">
+        ← Back to Services
+      </a>
+      <a href="home.html" class="px-3 py-1 rounded bg-blue-600 hover:bg-blue-500 transition">
+        Home
+      </a>
+    </div>
+  </div>
+</header>
 </html>
