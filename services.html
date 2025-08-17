@@ -17,10 +17,10 @@
         <ul class="nav-links">
             <li><a href="#">ABOUT</a></li>
             <li class="dropdown">
-                <a href="#" class="active">FIND SUPPORT</a>
+                <a href="services.html" class="active">FIND SUPPORT</a>
                 <ul class="dropdown-content">
-                    <li><a href="#">SUPPORT FOR ME</a></li>
-                    <li><a href="#">SUPPORT FOR A FRIEND</a></li>
+                    <li><a href="student.html">SUPPORT FOR ME</a></li>
+                    <li><a href="costofliving.html">Cost Of Living</a></li>
                     <li><a href="#">SUPPORT FOR PARENTS</a></li>
                 </ul>
             </li>
@@ -31,10 +31,12 @@
         </ul>
     </nav>
 
-    <header class="banner">
-        <img src="phone.png" alt="Phone Icon">
-        <h1><span>Find</span> support</h1>
-    </header>
+    <div class="hero-image_1">
+        <div class="hero-text">
+            <h1>Find Services</h1>
+            <p>Discover the support available to you</p>
+        </div>
+    </div>
 
     <section class="intro">
         <p>
@@ -45,7 +47,7 @@
     </section>
 
     <section class="cards">
-        <div class="card orange" onclick="goTo('cost-of-living.html')">
+        <div class="card orange" onclick="window.location.href='costofliving.html'">
             <h2>Cost of living</h2>
             <p>
                 Explore our cost of living hub to find support, learn about how it is
@@ -53,7 +55,7 @@
             </p>
         </div>
 
-        <div class="card red" onclick="goTo('student-space.html')">
+        <div class="card red" onclick="window.location.href='student.html'">
             <h2>Student Space</h2>
             <p>
                 Student Space is here to make it easier for you to find the support you need
@@ -80,66 +82,7 @@
         </div>
     </section>
 
-    <footer class="footer text-white py-12 px-6 lg:px-12 mt-auto">
-        <div class="max-w-7xl mx-auto">
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-
-                <div class="flex flex-col gap-2">
-                    <a href="#" class="footer-link">About</a>
-                    <a href="#" class="footer-link">Donate</a>
-                    <a href="#" class="footer-link">Jobs & Opportunities</a>
-                </div>
-
-                <!-- Column 2: Links -->
-                <div class="flex flex-col gap-2">
-                    <a href="#" class="footer-link">Get in contact</a>
-                    <a href="#" class="footer-link">Privacy statement</a>
-                    <a href="#" class="footer-link">Feedback and Complaints</a>
-                </div>
-
-                <!-- Column 3: Search bar and social icons (this is different from the image, but a more common layout) -->
-                <div class="flex flex-col gap-4 col-span-2">
-                    <!-- Search Bar -->
-                    <div class="relative w-full md:max-w-sm">
-                        <input type="text" id="search-input" placeholder="Search"
-                            class="w-full pl-4 pr-10 py-2 rounded-md bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                        <button id="search-button"
-                            class="absolute inset-y-0 right-0 flex items-center px-4 text-gray-500 hover:text-gray-700"
-                            aria-label="Search">
-                            <i class="fas fa-search"></i>
-                        </button>
-                    </div>
-
-                    <!-- Social Media Icons -->
-                    <div class="flex items-center space-x-4">
-                        <a href="#" class="social-icon text-xl" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-icon text-xl" title="Twitter"><i class="fab fa-x-twitter"></i></a>
-                        <a href="#" class="social-icon text-xl" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-icon text-xl" title="Instagram"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-
-                <!-- Column 4: Text and Newsletter -->
-                <div class="flex flex-col gap-2 md:col-span-2 lg:col-span-1 mt-6 lg:mt-0">
-                    <p class="text-sm text-gray-400">Student Minds is registered with Companies House, 07493445</p>
-                    <p class="text-sm text-gray-400">Student Minds is a Charity registered in England and Wales, 1142783
-                    </p>
-                    <!-- This is a placeholder for the Fundraising Regulator logo -->
-                    <div class="mt-4 flex items-center">
-                        <img src="https://placehold.co/150x50/374151/E5E7EB?text=Fundraising+Regulator"
-                            alt="Fundraising Regulator" class="fundraising-logo">
-                    </div>
-                    <a href="#" class="footer-link text-sm mt-4">Sign up to our newsletter</a>
-                </div>
-            </div>
-
-            <!-- Bottom section of the footer (a horizontal line) -->
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-500 text-sm">
-                &copy; 2024 Your Company Name. All Rights Reserved.
-            </div>
-        </div>
-    </footer>
+    <br>
 
     <script src="script.js"></script>
 </body>
