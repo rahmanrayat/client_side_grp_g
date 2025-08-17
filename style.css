@@ -1,4 +1,4 @@
-/* === Global Reset & Defaults === */
+/* === Base Styles === */
 * {
   margin: 0;
   padding: 0;
@@ -80,45 +80,7 @@ img {
   padding: 0 15px;
 }
 
-/* === Page-Specific Sections: About Us === */
-.about-us-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  align-items: center;
-  text-align: justify;
-}
-
-.about-us-section img {
-  border-radius: 8px;
-  height: 400px;
-  object-fit: cover;
-}
-
-.mission-offer-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  text-align: justify;
-}
-
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  text-align: center;
-  margin-top: 20px;
-}
-
-.team-grid img {
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  margin: 0 auto 10px;
-}
-
-/* === Page-Specific Sections: Contact === */
+/* === Contact Page Sections === */
 .contact-section {
   display: flex;
   gap: 30px;
@@ -225,17 +187,10 @@ img {
   color: #e0f0ff;
 }
 
-/* === Responsive === */
+/* === Responsive for Contact === */
 @media (max-width: 768px) {
-  .about-us-section,
-  .mission-offer-section,
   .contact-section {
     flex-direction: column;
-    grid-template-columns: 1fr;
-  }
-
-  .team-grid {
-    grid-template-columns: 1fr;
   }
 
   .address-info-section {
