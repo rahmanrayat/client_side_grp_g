@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login or Sign Up</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #0a9396, #94d2bd);
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            flex-direction: column;
+        }
+
+        .signup-container {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #0a9396;
+        }
+
+        .form-control {
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .btn-submit {
+            background: #0a9396;
+            color: white;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            background: #005f73;
+            transform: scale(1.05);
+        }
+
+        .toast-message {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #ffdd57;
+            color: #333;
+            padding: 15px 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            font-weight: bold;
+            opacity: 0;
+            animation: fadeInOut 3s forwards;
+            z-index: 9999;
+        }
+
+        @keyframes fadeInOut {
+            0% {opacity: 0; transform: translateY(-20px);}
+            10% {opacity: 1; transform: translateY(0);}
+            90% {opacity: 1; transform: translateY(0);}
+            100% {opacity: 0; transform: translateY(-20px);}
+        }
+
+        .btn-home {
+            background: linear-gradient(45deg, #ff6b6b, #feca57, #1dd1a1);
+            color: white;
+            font-weight: bold;
+            padding: 12px;
+            border-radius: 50px;
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+            font-size: 18px;
+            margin-top: 20px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: bounce 2s infinite;
+        }
+
+        .btn-home:hover {
+            transform: scale(1.05) rotate(-2deg);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        .toggle-link {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            color: #0a9396;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="signup-container">
+        <h2 id="formTitle">Create Your Account</h2>
+
+        <form id="signupForm">
+            <input type="text" class="form-control" placeholder="First Name" required>
+            <input type="text" class="form-control" placeholder="Middle Name">
+            <input type="text" class="form-control" placeholder="Last Name" required>
+            <input type="text" class="form-control" placeholder="Nationality">
+            <input type="email" class="form-control" placeholder="Google Account Email" required>
+            <input type="tel" class="form-control" placeholder="Phone Number" required>
+            <input type="text" class="form-control" placeholder="University">
+            <input type="password" class="form-control" placeholder="Password (min 8 chars)" required>
+            <button type="submit" class="btn btn-submit w-100">Sign Up</button>
+        </form>
+
+        
+        <form id="loginForm" style="display:none;">
+            <input type="email" class="form-control" placeholder="Email" required>
+            <input type="password" class="form-control" placeholder="Password (min 8 chars)" required>
+            <button type="submit" class="btn btn-submit w-100">Login</button>
+        </form>
+
+       
+        <span class="toggle-link" id="toggleText">Already have an account? Login</span>
+
+        <a href="home.html" class="btn btn-home w-100">🏠 Back to Home</a>
+    </div>
+
+    <script>
+       
+        const signupForm = document.getElementById("signupForm");
+        const loginForm = document.getElementById("loginForm");
+        const toggleText = document.getElementById("toggleText");
+        const formTitle = document.getElementById("formTitle");
+
+        toggleText.addEventListener("click", () => {
+            if (signupForm.style.display === "none") {
+                signupForm.style.display = "block";
+                loginForm.style.display = "none";
+                formTitle.textContent = "Create Your Account";
+                toggleText.textContent = "Already have an account? Login";
+            } else {
+                signupForm.style.display = "none";
+                loginForm.style.display = "block";
+                formTitle.textContent = "Login to Your Account";
+                toggleText.textContent = "Don't have an account? Sign Up";
+            }
+        });
+
+    
+        signupForm.addEventListener("submit", function(e) {
+            e.preventDefault();
+            const phone = this.querySelector('input[placeholder="Phone Number"]').value.trim();
+            const password = this.querySelector('input[type="password"]').value.trim();
+
+            const phoneRegex = /^\d{10}$/;
+            if (!phoneRegex.test(phone)) {
+                alert("Woah! Your phone must be 10 digits long 📱");
+                return;
+            }
+            if (password.length < 8) {
+                alert("Password must be at least 8 characters long 🔑");
+                return;
+            }
+
+            const toast = document.createElement("div");
+            toast.className = "toast-message";
+            toast.textContent = "🎉 Boom! Your account is ready to roll!";
+            document.body.appendChild(toast);
+            setTimeout(() => toast.remove(), 3000);
+
+            this.reset();
+        });
+
+        loginForm.addEventListener("submit", function(e) {
+            e.preventDefault();
+            const password = this.querySelector('input[type="password"]').value.trim();
+
+            if (password.length < 8) {
+                alert("Password must be at least 8 characters long 🔑");
+                return;
+            }
+
+            const toast = document.createElement("div");
+            toast.className = "toast-message";
+            toast.textContent = "✅ Welcome back! You’re logged in.";
+            document.body.appendChild(toast);
+            setTimeout(() => toast.remove(), 3000);
+
+            this.reset();
+        });
+    </script>
+
+</body>
+</html>
